@@ -1,0 +1,73 @@
+:root {
+  --bg: #0f1720;
+  --card: #111827;
+  --accent: #06b6d4;
+  --muted: #94a3b8;
+}
+body {
+  font-family: Arial, sans-serif;
+  background: var(--bg);
+  color: #e6eef6;
+  margin: 0;
+}
+header {
+  padding: 18px 24px;
+  background: #0b1220;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+header h1 {
+  font-size: 18px;
+  margin: 0;
+}
+nav a {
+  color: var(--accent);
+  margin-right: 12px;
+  text-decoration: none;
+}
+main {
+  padding: 24px;
+}
+.page {
+  max-width: 800px;
+  margin: 16px auto;
+  background: #111827;
+  padding: 18px;
+  border-radius: 8px;
+}
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: #fff;
+  margin-top: 5px;
+  margin-bottom: 10px;
+}
+button {
+  background: var(--accent);
+  border: none;
+  padding: 8px 12px;
+  color: #052024;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-right: 6px;
+}
+button:hover {
+  opacity: 0.9;
+}
+.box {
+  background: #071122;
+  padding: 10px;
+  border-radius: 6px;
+  min-height: 30px;
+  white-space: pre-wrap;
+}
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 10px;
+  font-size: 14px;
+}

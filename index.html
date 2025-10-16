@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cripto-ML — Vigenère + TensorFlow.js</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.17.0/dist/tf.min.js"></script>
+</head>
+<body>
+  <header>
+    <h1>🔐 Cripto-ML — Vigenère + ML (TensorFlow.js)</h1>
+    <nav>
+      <a href="#home">Início</a>
+      <a href="#criptografar">Criptografar</a>
+      <a href="#ml">Treinar ML</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="page">
+      <h2>Bem-vindo</h2>
+      <p>Este é um protótipo simples de criptografia e aprendizado de máquina usando TensorFlow.js.</p>
+      <p>Use as abas acima para testar a cifra e treinar o modelo.</p>
+    </section>
+
+    <section id="criptografar" class="page" style="display:none;">
+      <h2>Ferramenta: Vigenère</h2>
+      <label>Chave:</label>
+      <input id="vkey" value="KEY">
+      <textarea id="plaintext" placeholder="Digite o texto" rows="3"></textarea><br>
+      <button id="btnCifrar">Criptografar</button>
+      <button id="btnDecifrar">Descriptografar</button>
+      <pre id="cipherResult" class="box"></pre>
+    </section>
+
+    <section id="ml" class="page" style="display:none;">
+      <h2>Machine Learning (TensorFlow.js)</h2>
+
+      <label>Tamanho do dataset:</label>
+      <input id="dsSize" type="number" value="500">
+      <label>Comprimento máximo:</label>
+      <input id="maxLen" type="number" value="8">
+      <label>Chave do gerador:</label>
+      <input id="genKey" value="KEY">
+      <button id="genDataBtn">Gerar dataset</button><br><br>
+
+      <button id="trainBtn">Treinar modelo</button>
+      <button id="evalBtn">Avaliar modelo</button><br><br>
+
+      <pre id="mlLogs" class="box"></pre>
+
+      <label>Testar predição:</label>
+      <input id="testCipher" placeholder="Texto cifrado">
+      <button id="predictBtn">Predizer</button>
+      <pre id="predictOut" class="box"></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Projeto exemplo — Guilherme</p>
+  </footer>
+
+  <script src="cripto.js"></script>
+</body>
+</html>
